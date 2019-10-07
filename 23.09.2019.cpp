@@ -35,28 +35,45 @@ int main() {
 	
 	dc = pow(b, 2)-4*a*c;
 	
+	int case_;
 	
-	if (dc < 0) {
-		cout<<"nema"<<endl;
-	}
-	else if (dc == 0) {
+	if(dc<0) case_ = 1;
+	if(dc==0) case_ = 2;
+	if(dc>0) case_ = 3;
+	
+	
+	
+	switch(case_) {
+		case 1:
+		cout<<"Нет корней"<<endl;
+		break;
+	    case 2: 
 		x1 = (-b+sqrt(dc))/(2*a);
-		cout << "dc = " << x1 << endl << "x1 = " << x1 << endl;
-	}
-	else {
+		cout << "dc = " << dc << endl << "x1 = " << x1 << endl;
+		case 3:
 		x1 = (-b+sqrt(dc))/(2*a);
 		x2 = (-b-sqrt(dc))/(2*a);
-		
-		cout << "dc = " << dc << endl << "x1 = " << endl << "x2 = " << x2 << endl;
-	}
+		cout << "dc = " << dc << endl << "x1 = " << x1 << endl << "x2 = " << x2 << endl;
+	    break;
+    }
+	
+	
+//	if (dc < 0) {
+//		cout<<"Нет корней"<<endl;
+//	}
+//	else if (dc == 0) {
+//		x1 = (-b+sqrt(dc))/(2*a);
+//		cout << "dc = " << x1 << endl << "x1 = " << x1 << endl;
+//	}
+//	else {
+//		x1 = (-b+sqrt(dc))/(2*a);
+//		x2 = (-b-sqrt(dc))/(2*a);
+//		
+//		cout << "dc = " << dc << endl << "x1 = " << x1 << endl << "x2 = " << x2 << endl;
+//	}
 	
 	
 	
-	
-	
-	cout<<"dc - "<<dc<<endl;
-	cout<<"x1 - "<<x1<<endl;
-	cout<<"x2 - "<<x2<<endl;
 	
 	return 0;
 }
